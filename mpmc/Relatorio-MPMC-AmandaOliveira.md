@@ -24,7 +24,7 @@
 Projeto wokwi:
 
 ```
-[link wokwi](https://wokwi.com/projects/429125107544335361)
+https://wokwi.com/projects/429125107544335361
 ``` 
 
 Código Gerado: 
@@ -59,7 +59,7 @@ Figura 2: Arduino com ledpin aceso.
 
 **Conclusão:**
 
-Este exercício foi fundamental para nos familiarizarmos com as ferramentas que utilizaremos ao longo do curso. A compreensão do ambiente de desenvolvimento é essencial para o desenvolvimento de projetos mais complexos.
+Este exercício foi fundamental para me familizar com o wokwi e com um microcontrolador que usaremos ao longo do curso, o arduino uno. Além de entender melhor sobre os códigos gerados e o que cada parte dele faz.
 
 ---
 
@@ -93,15 +93,15 @@ Código gerado:
     //identificando os pinos que cada componente está ligado.
     int redLed = 8;
     int greenLed = 7;
-    int buton1 = 5;
-    int buton2 = 2;
+    int button1 = 5;
+    int button2 = 2;
 
     void setup() {
         // definindo o tipo de cada pino identificado acima.
         pinMode(redLed, OUTPUT);
         pinMode(greenLed, OUTPUT);
-        pinMode(buton1, INPUT_PULLUP);
-        pinMode(buton2, INPUT_PULLUP);
+        pinMode(button1, INPUT_PULLUP);
+        pinMode(button2, INPUT_PULLUP);
         digitalWrite(redLed, LOW);
         digitalWrite(greenLed, LOW);
     }
@@ -109,14 +109,14 @@ Código gerado:
     void loop() {
         /* se o botão vermelho for acionado, o led vermelho 
         acenderá e o verde apagará caso esteja aceso. */
-        if(digitalRead(buton1) == LOW){
+        if(digitalRead(button1) == LOW){
             digitalWrite(greenLed, LOW);
             digitalWrite(redLed, HIGH);   
         }
         /* se o botão verde for acionado, os leeds ficarão 
         piscando alternadamente com um intervalo de 500ms 
         até que o botão vermelho seja acionado novamente.*/
-        if(digitalRead(buton2) == LOW){
+        if(digitalRead(button2) == LOW){
             while(digitalRead(buton1) == HIGH){
             digitalWrite(redLed, LOW);
             digitalWrite(greenLed, HIGH);
@@ -146,7 +146,7 @@ Figura 5: Projeto com led verde aceso após acionamento do botão verde.
 
 **Conclusão:**
 
-A programação em Assembly nos proporcionou um entendimento mais profundo do funcionamento interno do microcontrolador. Apesar de ser uma linguagem de baixo nível, ela nos permite ter um controle preciso sobre o hardware.
+Neste exercício criei um projeto mais elaborado com novos componentes e aprendi como ligá-los ao arduino. Além disso, aprendi mais sobre o pushbutton e a função debounce do simulador que permite que o arduino interprete o clique do botão como um único clique quando ele é pressionado.
 
 ---
 
@@ -212,7 +212,7 @@ Figura 7: Projeto exibindo 9 no display.
 
 **Conclusão:**
 
-As interrupções são uma ferramenta poderosa para o desenvolvimento de sistemas embarcados reativos. Elas nos permitem lidar com eventos externos de forma eficiente, sem a necessidade de polling constante.
+Neste exercício aprendi mais sobre o display de 7 segmentos e como ligá-lo ao arduino.
 
 ---
 
@@ -422,6 +422,6 @@ Figura 11: Projeto após um acionamento do botão vermelho, exibindo 1 no displa
 
 **Conclusão:**
 
-A comunicação serial é uma ferramenta fundamental para o desenvolvimento de sistemas embarcados que precisam interagir com o mundo externo. Ela nos permite conectar o microcontrolador a sensores, atuadores, computadores e outros dispositivos.
+Neste exercício foi possível aprender como criar e utilizar funções no arduino. Uma dificuldade que tive ao logo do exercício foi que estava fazendo o código sem os delays após exibir o número no display, o que fazia o display exibir valores diferentes e lixo de memória. Após pesquisar e verificar exemplos da paltaforma wokwi, percebi que muitos códigos possuiam essa função, adicionei para testar e funcionou corretamente como eu esperava.
 
 ---
