@@ -24,7 +24,7 @@
 Projeto wokwi:
 
 ```
-https://wokwi.com/projects/429125107544335361
+[link wokwi](https://wokwi.com/projects/429125107544335361)
 ``` 
 
 Código Gerado: 
